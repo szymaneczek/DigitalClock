@@ -31,6 +31,12 @@ public class MyFrame extends JFrame {
         while (true){
             time = timeFormat.format(Calendar.getInstance().getTime());
             timeLabel.setText(time);
+
+            try{
+                Thread.sleep(1000);
+            } catch (InterruptedException e){
+                e.printStackTrace();
+            }
         }
     }
 }
